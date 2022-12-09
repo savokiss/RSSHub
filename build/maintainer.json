@@ -382,6 +382,9 @@
     "/bbcnewslabs/news": [
         "elxy"
     ],
+    "/bdys/detail/:id": [
+        "savokiss"
+    ],
     "/behance/:user/:type?": [
         "MisteryMonster"
     ],

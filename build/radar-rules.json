@@ -1633,6 +1633,17 @@
       }
     ]
   },
+  "bdys01.com": {
+    "_name": "哔嘀影视-新版",
+    ".": [
+      {
+        "title": "剧集订阅",
+        "docs": "https://docs.rsshub.app/multimedia.html#domp4-ying-shi",
+        "source": "/",
+        "target": "/bdys/detail/:id"
+      }
+    ]
+  },
   "behance.net": {
     "_name": "Behance",
     "www": [
