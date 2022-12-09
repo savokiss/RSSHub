@@ -623,27 +623,6 @@
       }
     ]
   },
-  "ecnu.edu.cn": {
-    "_name": "ACM-ECNU",
-    "acm": [
-      {
-        "title": "所有比赛列表",
-        "docs": "https://docs.rsshub.app/programming.html#ACM-ECNU",
-        "source": [
-          "/contest/"
-        ],
-        "target": "/acm-ecnu/contest/"
-      },
-      {
-        "title": "仅公开比赛列表",
-        "docs": "https://docs.rsshub.app/programming.html#ACM-ECNU",
-        "source": [
-          "/contest/"
-        ],
-        "target": "/acm-ecnu/contest/public"
-      }
-    ]
-  },
   "acs.org": {
     "_name": "American Chemistry Society",
     "pubs": [
@@ -4395,6 +4374,43 @@
       }
     ]
   },
+  "ecnu.edu.cn": {
+    "_name": "华东师范大学",
+    "acm": [
+      {
+        "title": "所有比赛列表",
+        "docs": "https://docs.rsshub.app/university.html#hua-dong-shi-fan-da-xue",
+        "source": [
+          "/contest/",
+          "/"
+        ],
+        "target": "/ecnu/acm/contest/"
+      },
+      {
+        "title": "仅公开比赛列表",
+        "docs": "https://docs.rsshub.app/university.html#hua-dong-shi-fan-da-xue",
+        "source": [
+          "/contest/",
+          "/"
+        ],
+        "target": "/ecnu/acm/contest/public"
+      }
+    ]
+  },
+  "kaoyan.com": {
+    "_name": "华东师范大学",
+    "yz": [
+      {
+        "title": "研究生院",
+        "docs": "https://docs.rsshub.app/university.html#hua-dong-shi-fan-da-xue",
+        "source": [
+          "/ecnu/tiaoji",
+          "/"
+        ],
+        "target": "/ecnu/yjs"
+      }
+    ]
+  },
   "economist.com": {
     "_name": "The Economist",
     ".": [
@@ -5077,6 +5093,19 @@
       }
     ]
   },
+  "foreverblog.cn": {
+    "_name": "十年之约",
+    "www": [
+      {
+        "title": "专题展示",
+        "docs": "https://docs.rsshub.app/blog.html#shi-nian-zhi-yue",
+        "source": [
+          "/feeds.html"
+        ],
+        "target": "/foreverblog/feeds"
+      }
+    ]
+  },
   "fortunechina.com": {
     "_name": "财富中文网",
     ".": [
@@ -5100,6 +5129,19 @@
         "source": [
           "/"
         ]
+      }
+    ]
+  },
+  "freewechat.com": {
+    "_name": "自由微信",
+    ".": [
+      {
+        "title": "公众号",
+        "docs": "https://docs.rsshub.app/new-media.html#zi-you-wei-xin",
+        "source": [
+          "/profile/:id"
+        ],
+        "target": "/freewechat/profile/:id"
       }
     ]
   },
@@ -5936,6 +5978,18 @@
       }
     ]
   },
+  "gz.gov.cn": {
+    "_name": "广州市人民政府",
+    "www": [
+      {
+        "title": "新闻",
+        "docs": "https://docs.rsshub.app/government.html#guang-zhou-shi-ren-min-zheng-fu",
+        "source": [
+          "/:channel/:category"
+        ]
+      }
+    ]
+  },
   "hebei.gov.cn": {
     "_name": "河北省人民政府",
     "czt": [
@@ -6487,6 +6541,19 @@
         "source": [
           "/cheaps.php"
         ]
+      }
+    ]
+  },
+  "guanhai.com.cn": {
+    "_name": "观海新闻",
+    ".": [
+      {
+        "title": "首页",
+        "docs": "https://docs.rsshub.app/new-media.html#guan-hai-xin-wen",
+        "source": [
+          "/"
+        ],
+        "target": "/guanhai"
       }
     ]
   },
@@ -14304,6 +14371,39 @@
       }
     ]
   },
+  "shmtu.edu.cn": {
+    "_name": "上海海事大学",
+    "jwc": [
+      {
+        "title": "教务信息",
+        "docs": "https://docs.rsshub.app/university.html#shang-hai-dian-li-da-xue",
+        "source": [
+          "/:type"
+        ],
+        "target": "/shmtu/jwc/:type"
+      }
+    ],
+    "portal": [
+      {
+        "title": "数字平台",
+        "docs": "https://docs.rsshub.app/university.html#shang-hai-dian-li-da-xue",
+        "source": [
+          "/:type"
+        ],
+        "target": "/shmtu/portal/:type"
+      }
+    ],
+    "www": [
+      {
+        "title": "官网信息",
+        "docs": "https://docs.rsshub.app/university.html#shang-hai-dian-li-da-xue",
+        "source": [
+          "/:type"
+        ],
+        "target": "/shmtu/www/:type"
+      }
+    ]
+  },
   "shopback.com.tw": {
     "_name": "ShopBack",
     ".": [
@@ -16460,6 +16560,15 @@
       }
     ]
   },
+  "usepanda.com": {
+    "_name": "Panda",
+    ".": [
+      {
+        "title": "Feeds",
+        "docs": "https://docs.rsshub.app/other.html#panda"
+      }
+    ]
+  },
   "ustb.edu.cn": {
     "_name": "北京科技大学",
     "gs": [
@@ -16548,6 +16657,19 @@
           "/xktz.htm"
         ],
         "target": "/wsts/jwch/xktz"
+      }
+    ]
+  },
+  "gixnetwork.org": {
+    "_name": "University of Washington",
+    ".": [
+      {
+        "title": "Global Innovation Exchange News",
+        "docs": "https://docs.rsshub.app/university.html#university-of-washington",
+        "source": [
+          "/news/:category"
+        ],
+        "target": "/uw/gix/news/:category"
       }
     ]
   },
