@@ -1844,6 +1844,18 @@
       }
     ]
   },
+  "acpaa.cn": {
+    "_name": "中华全国专利代理师协会",
+    ".": [
+      {
+        "title": "文章",
+        "docs": "https://docs.rsshub.app/routes/other#zhong-hua-quan-guo-zhuan-li-dai-li-shi-xie-hui",
+        "source": [
+          "/article/taglist.jhtml"
+        ]
+      }
+    ]
+  },
   "acs.org": {
     "_name": "American Chemistry Society",
     "pubs": [
@@ -7154,6 +7166,18 @@
       }
     ]
   },
+  "damai.cn": {
+    "_name": "大麦网",
+    "search": [
+      {
+        "title": "票务更新",
+        "docs": "https://docs.rsshub.app/routes/shopping#da-mai-wang",
+        "source": [
+          "/search.html"
+        ]
+      }
+    ]
+  },
   "dapenti.com": {
     "_name": "喷嚏",
     ".": [
@@ -8662,6 +8686,19 @@
           "/news/flash"
         ],
         "target": "/egsea/flash"
+      }
+    ]
+  },
+  "ekantipur.com": {
+    "_name": "Ekantipur",
+    ".": [
+      {
+        "title": "Full Article RSS",
+        "docs": "https://docs.rsshub.app/routes/traditional-media#ekantipur-%E0%A4%95%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AA%E0%A5%81%E0%A4%B0-nepal",
+        "source": [
+          "/:channel"
+        ],
+        "target": "/ekantipur/:channel"
       }
     ]
   },
@@ -14553,6 +14590,19 @@
       }
     ]
   },
+  "hoyolab.com": {
+    "_name": "HoYoLAB",
+    ".": [
+      {
+        "title": "活动公告资讯",
+        "docs": "https://docs.rsshub.app/routes/game#hoyolab-news",
+        "source": [
+          "/",
+          "/circles/:gid/:unknow/official"
+        ]
+      }
+    ]
+  },
   "hpoi.net": {
     "_name": "Hpoi手办维基",
     "www": [
@@ -14677,6 +14727,15 @@
           "/"
         ],
         "target": "/huggingface/daily-papers"
+      },
+      {
+        "title": "中文博客",
+        "docs": "https://docs.rsshub.app/routes/programming#huggingface",
+        "source": [
+          "/blog/zh",
+          "/"
+        ],
+        "target": "/huggingface/blog-zh"
       }
     ]
   },
@@ -19125,6 +19184,19 @@
       }
     ]
   },
+  "liveuamap.com": {
+    "_name": "Live Universal Awareness Map",
+    ".": [
+      {
+        "title": "Region",
+        "docs": "https://docs.rsshub.app/routes/new-media#live-universal-awareness-map",
+        "source": [
+          "/:region*"
+        ],
+        "target": "/liveuamap/:region"
+      }
+    ]
+  },
   "lkong.com": {
     "_name": "龙空",
     ".": [
@@ -23066,6 +23138,17 @@
         "source": [
           "/finnews/news_breaking.html"
         ]
+      }
+    ]
+  },
+  "onet.pl": {
+    "_name": "Onet",
+    "wiadomosci": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/new-media#onet",
+        "source": "/",
+        "target": "/onet/news"
       }
     ]
   },
@@ -29215,10 +29298,121 @@
         "title": "Blog",
         "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
         "source": [
-          "/blog/:language",
-          "/"
+          "/blog/:language/"
         ],
-        "target": "/tradingview/blog"
+        "target": "/tradingview/blog/:language/"
+      },
+      {
+        "title": "Blog - Alerts",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/alerts/"
+        ],
+        "target": "/tradingview/blog/:language/category/alerts"
+      },
+      {
+        "title": "Blog - Bitcoin and Crypto",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/bitcoin-charts/"
+        ],
+        "target": "/tradingview/blog/:language/category/bitcoin-charts"
+      },
+      {
+        "title": "Blog - Business Updates",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/business-updates/"
+        ],
+        "target": "/tradingview/blog/:language/category/business-updates"
+      },
+      {
+        "title": "Blog - Charting",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/charts/"
+        ],
+        "target": "/tradingview/blog/:language/category/charts"
+      },
+      {
+        "title": "Blog - Charting Library",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/charting-library/"
+        ],
+        "target": "/tradingview/blog/:language/category/charting-library"
+      },
+      {
+        "title": "Blog - Data Feeds and Exchanges",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/data-feeds-exchanges/"
+        ],
+        "target": "/tradingview/blog/:language/category/data-feeds-exchanges"
+      },
+      {
+        "title": "Blog - Desktop",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/desktop/"
+        ],
+        "target": "/tradingview/blog/:language/category/desktop"
+      },
+      {
+        "title": "Blog - Market Analysis",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/market-analysis/"
+        ],
+        "target": "/tradingview/blog/:language/category/market-analysis"
+      },
+      {
+        "title": "Blog - Mobile",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/mobile/"
+        ],
+        "target": "/tradingview/blog/:language/category/mobile"
+      },
+      {
+        "title": "Blog - Pine Script®",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/pine/"
+        ],
+        "target": "/tradingview/blog/:language/category/pine"
+      },
+      {
+        "title": "Blog - Screener",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/stock-screener/"
+        ],
+        "target": "/tradingview/blog/:language/category/stock-screener"
+      },
+      {
+        "title": "Blog - Social",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/social/"
+        ],
+        "target": "/tradingview/blog/:language/category/social"
+      },
+      {
+        "title": "Blog - Trading and Brokerage",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/trading/"
+        ],
+        "target": "/tradingview/blog/:language/category/trading"
+      },
+      {
+        "title": "Blog - Widgets",
+        "docs": "https://docs.rsshub.app/routes/program-update#tradingview-blog",
+        "source": [
+          "/blog/:language/category/widgets/"
+        ],
+        "target": "/tradingview/blog/:language/category/widgets"
       }
     ]
   },
@@ -29400,6 +29594,15 @@
         "docs": "https://docs.rsshub.app/routes/social-media#zhi-hu",
         "source": "/*",
         "target": "/zhihu/daily"
+      }
+    ]
+  },
+  "trendingpapers.com": {
+    "_name": "trendingpapers",
+    ".": [
+      {
+        "title": "Trending Papers on arXiv",
+        "docs": "https://docs.rsshub.app/routes/journal#trending-papers-trending-papers-on-arxiv"
       }
     ]
   },
