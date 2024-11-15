@@ -1071,7 +1071,7 @@
     ]
   },
   "acs.org": {
-    "_name": "Unknown",
+    "_name": "ACS Publications",
     "pubs": [
       {
         "title": "Unknown",
@@ -1116,6 +1116,28 @@
           "/:type"
         ],
         "target": "/aeon/:type"
+      }
+    ]
+  },
+  "afr.com": {
+    "_name": "The Australian Financial Review",
+    "www": [
+      {
+        "title": "Latest",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/latest",
+          "/"
+        ],
+        "target": "/afr/latest"
+      },
+      {
+        "title": "Navigation",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/path*"
+        ],
+        "target": "/afr/navigation/:path{.+}"
       }
     ]
   },
@@ -3245,6 +3267,19 @@
       }
     ]
   },
+  "baoyu.io": {
+    "_name": "宝玉",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/baoyu/blog"
+      }
+    ]
+  },
   "baozimh.com": {
     "_name": "包子漫画",
     "www": [
@@ -4251,13 +4286,12 @@
     "_name": "C114 通信网",
     ".": [
       {
-        "title": "滚动新闻",
+        "title": "滚动资讯",
         "docs": "https://docs.rsshub.app/routes/new-media",
         "source": [
-          "/news/roll.asp",
-          "/"
+          "/news/roll.asp"
         ],
-        "target": "/c114/roll"
+        "target": "/c114(_,url)=>{url=new URL(url);const original=url.searchParams.get(\"o\");return`/roll${original?`/${original}`:\"\"}`}"
       }
     ]
   },
@@ -4287,6 +4321,19 @@
           "/reviews/exhibition"
         ],
         "target": "/caareviews/exhibition"
+      }
+    ]
+  },
+  "cags.ac.cn": {
+    "_name": "Chinese Academy of Geological Sciences",
+    "edu": [
+      {
+        "title": "研究生院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/cags/edu/:category"
       }
     ]
   },
@@ -5960,7 +6007,7 @@
     ]
   },
   "chlinlearn.top": {
-    "_name": "chlinlearn的技术博客",
+    "_name": "chlinlearn 的技术博客",
     "daily-blog": [
       {
         "title": "值得一读技术博客",
@@ -6468,6 +6515,107 @@
       }
     ]
   },
+  "cngold.org.cn": {
+    "_name": "中国黄金协会",
+    "www": [
+      {
+        "title": "分类",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/:category"
+        ],
+        "target": "/cngoldparams=>{const category=params.category;return category?`/${category}`:\"\"}"
+      },
+      {
+        "title": "政策法规 - 法律法规",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/policies-245.html"
+        ],
+        "target": "/cngold/policies-245"
+      },
+      {
+        "title": "政策法规 - 产业政策",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/policies-262.html"
+        ],
+        "target": "/cngold/policies-262"
+      },
+      {
+        "title": "政策法规 - 黄金标准",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/policies-281.html"
+        ],
+        "target": "/cngold/policies-281"
+      },
+      {
+        "title": "行业培训 - 黄金投资分析师",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/training-242.html"
+        ],
+        "target": "/cngold/training-242"
+      },
+      {
+        "title": "行业培训 - 教育部1+X",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/training-246.html"
+        ],
+        "target": "/cngold/training-246"
+      },
+      {
+        "title": "行业培训 - 矿业权评估师",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/training-338.html"
+        ],
+        "target": "/cngold/training-338"
+      },
+      {
+        "title": "行业培训 - 其他培训",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/training-247.html"
+        ],
+        "target": "/cngold/training-247"
+      },
+      {
+        "title": "黄金科技 - 黄金协会科学技术奖",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/technology-318.html"
+        ],
+        "target": "/cngold/technology-318"
+      },
+      {
+        "title": "黄金科技 - 科学成果评价",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/technology-319.html"
+        ],
+        "target": "/cngold/technology-319"
+      },
+      {
+        "title": "黄金科技 - 新技术推广",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/technology-320.html"
+        ],
+        "target": "/cngold/technology-320"
+      },
+      {
+        "title": "黄金科技 - 黄金技术大会",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/technology-350.html"
+        ],
+        "target": "/cngold/technology-350"
+      }
+    ]
+  },
   "cnki.net": {
     "_name": "中国知网",
     "navi": [
@@ -6591,7 +6739,7 @@
       }
     ]
   },
-  "coomer.party": {
+  "coomer.su": {
     "_name": "Coomer",
     ".": [
       {
@@ -6624,6 +6772,19 @@
           "/"
         ],
         "target": "/copernicium/:category"
+      }
+    ]
+  },
+  "counter-strike.net": {
+    "_name": "Counter Strike",
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/news/:category"
+        ],
+        "target": "/counter-strike(params,url)=>{url=new URL(url);const category=params.category;const language=url.searchParams.get(\"l\");return`/news${category?`/${category}${language?`/${language}`:\"\"}`:\"\"}`}"
       }
     ]
   },
@@ -7123,12 +7284,12 @@
   },
   "daily.dev": {
     "_name": "Daily.dev",
-    ".": [
+    "app": [
       {
         "title": "Most Discussed",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/popular"
+          "/discussed"
         ],
         "target": "/daily/discussed"
       },
@@ -7141,10 +7302,18 @@
         "target": "/daily/"
       },
       {
+        "title": "Source Posts",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/sources/:sourceId"
+        ],
+        "target": "/daily/source/:sourceId"
+      },
+      {
         "title": "Most upvoted",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/popular"
+          "/upvoted"
         ],
         "target": "/daily/upvoted"
       },
@@ -7373,16 +7542,168 @@
     ]
   },
   "deeplearning.ai": {
-    "_name": "deeplearning.ai",
+    "_name": "DeepLearning.AI",
     "www": [
       {
-        "title": "TheBatch 周报",
+        "title": "The Batch",
         "docs": "https://docs.rsshub.app/routes/programming",
         "source": [
-          "/thebatch",
-          "/"
+          "/the-batch",
+          "/the-batch/tag/:tag/"
         ],
-        "target": "/deeplearning/thebatch"
+        "target": "/deeplearningparams=>{const tag=params.tag;return`/the-batch${tag?`/${tag}`:\"\"}`}"
+      },
+      {
+        "title": "Weekly Issues",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/"
+        ],
+        "target": "/deeplearning/the-batch"
+      },
+      {
+        "title": "Andrew's Letters",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/letters/"
+        ],
+        "target": "/deeplearning/the-batch/letters"
+      },
+      {
+        "title": "Data Points",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/data-points/"
+        ],
+        "target": "/deeplearning/the-batch/data-points"
+      },
+      {
+        "title": "ML Research",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/research/"
+        ],
+        "target": "/deeplearning/the-batch/research"
+      },
+      {
+        "title": "Business",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/business/"
+        ],
+        "target": "/deeplearning/the-batch/business"
+      },
+      {
+        "title": "Science",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/science/"
+        ],
+        "target": "/deeplearning/the-batch/science"
+      },
+      {
+        "title": "AI & Society",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/ai-society/"
+        ],
+        "target": "/deeplearning/the-batch/ai-society"
+      },
+      {
+        "title": "Culture",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/culture/"
+        ],
+        "target": "/deeplearning/the-batch/culture"
+      },
+      {
+        "title": "Hardware",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/hardware/"
+        ],
+        "target": "/deeplearning/the-batch/hardware"
+      },
+      {
+        "title": "AI Careers",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/ai-careers/"
+        ],
+        "target": "/deeplearning/the-batch/ai-careers"
+      },
+      {
+        "title": "Letters from Andrew Ng - All",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/letters/"
+        ],
+        "target": "/deeplearning/the-batch/letters"
+      },
+      {
+        "title": "Letters from Andrew Ng - Personal Insights",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/personal-insights/"
+        ],
+        "target": "/deeplearning/the-batch/personal-insights"
+      },
+      {
+        "title": "Letters from Andrew Ng - Technical Insights",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/technical-insights/"
+        ],
+        "target": "/deeplearning/the-batch/technical-insights"
+      },
+      {
+        "title": "Letters from Andrew Ng - Business Insights",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/business-insights/"
+        ],
+        "target": "/deeplearning/the-batch/business-insights"
+      },
+      {
+        "title": "Letters from Andrew Ng - Tech & Society",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/tech-society/"
+        ],
+        "target": "/deeplearning/the-batch/tech-society"
+      },
+      {
+        "title": "Letters from Andrew Ng - DeepLearning.AI News",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/deeplearning-ai-news/"
+        ],
+        "target": "/deeplearning/the-batch/deeplearning-ai-news"
+      },
+      {
+        "title": "Letters from Andrew Ng - AI Careers",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/ai-careers/"
+        ],
+        "target": "/deeplearning/the-batch/ai-careers"
+      },
+      {
+        "title": "Letters from Andrew Ng - Just For Fun",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/just-for-fun/"
+        ],
+        "target": "/deeplearning/the-batch/just-for-fun"
+      },
+      {
+        "title": "Letters from Andrew Ng - Learning & Education",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/the-batch/tag/learning-education/"
+        ],
+        "target": "/deeplearning/the-batch/learning-education"
       }
     ]
   },
@@ -7491,6 +7812,20 @@
           "/news"
         ],
         "target": "/diandong/news/:cate"
+      }
+    ]
+  },
+  "dianping.com": {
+    "_name": "大众点评",
+    ".": [
+      {
+        "title": "用户动态",
+        "docs": "https://docs.rsshub.app/routes/shopping",
+        "source": [
+          "/member/:id",
+          "/userprofile/:id"
+        ],
+        "target": "/dianping/dianping/user/:id"
       }
     ]
   },
@@ -8261,6 +8596,19 @@
       }
     ]
   },
+  "enterprisecraftsmanship.com": {
+    "_name": "Enterprise Craftsmanship",
+    ".": [
+      {
+        "title": "Archives",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/archives/"
+        ],
+        "target": "/enterprisecraftsmanship/archives"
+      }
+    ]
+  },
   "epicgames.com": {
     "_name": "Epic Games Store",
     "store": [
@@ -8612,7 +8960,7 @@
     ]
   },
   "sdo.com": {
-    "_name": "FINAL FANTASY XIV 最终幻想 14",
+    "_name": "FINAL FANTASY XIV",
     "ff.web": [
       {
         "title": "最终幻想 14 国服",
@@ -8796,6 +9144,19 @@
           "/"
         ],
         "target": "/flyert/preferential"
+      }
+    ]
+  },
+  "flyert.com.cn": {
+    "_name": "飞客茶馆",
+    "www": [
+      {
+        "title": "会员说",
+        "docs": "https://docs.rsshub.app/routes/bbs",
+        "source": [
+          "/forum.php"
+        ],
+        "target": "/flyert(_,url)=>{const params=[...url.searchParams.entries()].map(([key,value])=>key+\"=\"+value).join(\"&\");return`/forum${params?`/${encodeURIComponent(params)}`:\"\"}`}"
       }
     ]
   },
@@ -9009,6 +9370,131 @@
           "/"
         ],
         "target": "/fuliba/latest"
+      }
+    ]
+  },
+  "furaffinity.net": {
+    "_name": "Furaffinity",
+    ".": [
+      {
+        "title": "Gallery",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/gallery/:username"
+        ],
+        "target": "/furaffinity/gallery/:username"
+      },
+      {
+        "title": "Gallery",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/scraps/:username"
+        ],
+        "target": "/furaffinity/scraps/:username"
+      },
+      {
+        "title": "Gallery",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/favorites/:username"
+        ],
+        "target": "/furaffinity/favorites/:username"
+      },
+      {
+        "title": "Browse",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/furaffinity/browse"
+      },
+      {
+        "title": "Commissions",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/commissions/:username"
+        ],
+        "target": "/furaffinity/commissions/:username"
+      },
+      {
+        "title": "Home",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/furaffinity/"
+      },
+      {
+        "title": "Journal Comments",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/journal/:id"
+        ],
+        "target": "/furaffinity/journal-comments/:id"
+      },
+      {
+        "title": "Journals",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/journals/:username"
+        ],
+        "target": "/furaffinity/journals/:username"
+      },
+      {
+        "title": "Search",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/furaffinity/search"
+      },
+      {
+        "title": "Shouts",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/user/:username"
+        ],
+        "target": "/furaffinity/shouts/:username"
+      },
+      {
+        "title": "Status",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/"
+        ],
+        "target": "/furaffinity/"
+      },
+      {
+        "title": "Submission Comments",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/view/:id"
+        ],
+        "target": "/furaffinity/submission-comments/:id"
+      },
+      {
+        "title": "Userpage",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/user/:username"
+        ],
+        "target": "/furaffinity/user/:username"
+      },
+      {
+        "title": "User's Watcher List",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/watchlist/to/:username"
+        ],
+        "target": "/furaffinity/watchers/:username"
+      },
+      {
+        "title": "User's Watching List",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/watchlist/by/:username"
+        ],
+        "target": "/furaffinity/watching/:username"
       }
     ]
   },
@@ -9729,6 +10215,19 @@
           "/"
         ],
         "target": "/gogoanimehd/recent-releases"
+      }
+    ]
+  },
+  "googleblog.com": {
+    "_name": "Google",
+    "developers": [
+      {
+        "title": "Developers Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/google/developers/:locale?"
       }
     ]
   },
@@ -12436,6 +12935,19 @@
       }
     ]
   },
+  "hamel.dev": {
+    "_name": "Hamel's Blog",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/hamel/blog"
+      }
+    ]
+  },
   "syosetu.org": {
     "_name": "hameln",
     ".": [
@@ -12988,6 +13500,16 @@
           "/*"
         ],
         "target": "/hrbeu/job/calendar"
+      }
+    ],
+    "sec": [
+      {
+        "title": "船舶工程学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:id/list.htm"
+        ],
+        "target": "/hrbeu/sec/:id"
       }
     ],
     "uae": [
@@ -14596,7 +15118,7 @@
     ]
   },
   "infzm.com": {
-    "_name": "infzm",
+    "_name": "南方周末",
     ".": [
       {
         "title": "热门文章",
@@ -14792,6 +15314,19 @@
           "/report.shtml"
         ],
         "target": "/iresearch/report"
+      }
+    ]
+  },
+  "isct.ac.jp": {
+    "_name": "Institute of Science Tokyo",
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:lang/news"
+        ],
+        "target": "/isct/news/:lang"
       }
     ]
   },
@@ -15168,6 +15703,17 @@
           "/xwzx/zsjy.htm"
         ],
         "target": "/jlu/ccst/xwzx/:category"
+      }
+    ],
+    "phy": [
+      {
+        "title": "物理学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:category/:column",
+          "/:category/:column/:subcolumn"
+        ],
+        "target": "/jlu/phy/:category/:column/:subcolumn?"
       }
     ]
   },
@@ -15730,6 +16276,19 @@
       }
     ]
   },
+  "langchain.dev": {
+    "_name": "LangChain Blog",
+    "blog": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/langchain/blog"
+      }
+    ]
+  },
   "lanqiao.cn": {
     "_name": "蓝桥云课",
     ".": [
@@ -15762,6 +16321,20 @@
           "/personal/:id"
         ],
         "target": "/laohu8/personal/:id"
+      }
+    ]
+  },
+  "last-origin.com": {
+    "_name": "LastOrigin",
+    "www": [
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/news.html",
+          "/"
+        ],
+        "target": "/last-origin/news"
       }
     ]
   },
@@ -15993,7 +16566,7 @@
     ]
   },
   "linkedin.com": {
-    "_name": "LinkedIn 领英",
+    "_name": "LinkedIn",
     "www": [
       {
         "title": "Jobs",
@@ -16137,6 +16710,19 @@
           "/work/tags/:tag"
         ],
         "target": "/logonews*"
+      }
+    ]
+  },
+  "logrocket.com": {
+    "_name": "logrocket blog",
+    "blog": [
+      {
+        "title": "blog.logrocket",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/logrocket/:type"
       }
     ]
   },
@@ -16446,7 +17032,7 @@
     ]
   },
   "malaysiakini.com": {
-    "_name": "Malaysiakini 当今大马",
+    "_name": "Malaysiakini",
     ".": [
       {
         "title": "News",
@@ -19576,7 +20162,7 @@
     ]
   },
   "nationalgeographic.com": {
-    "_name": "国家地理",
+    "_name": "National Geographic",
     ".": [
       {
         "title": "Daily Photo",
@@ -19608,16 +20194,17 @@
     ]
   },
   "natgeomedia.com": {
-    "_name": "国家地理",
+    "_name": "National Geographic",
     ".": [
       {
         "title": "分类",
         "docs": "https://docs.rsshub.app/routes/travel",
         "source": [
           "/:cat/:type",
+          "/:cat/",
           "/"
         ],
-        "target": "/natgeo/:cat/:type"
+        "target": "/natgeo/:cat/:type?"
       }
     ]
   },
@@ -20488,6 +21075,19 @@
       }
     ]
   },
+  "nielsberglund.com": {
+    "_name": "Niels Berglund Blog",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/nielsberglund/blog"
+      }
+    ]
+  },
   "nikkei.com": {
     "_name": "The Nikkei 日本経済新聞",
     "www": [
@@ -21188,6 +21788,14 @@
           "/"
         ],
         "target": "/nytimes/:lang?"
+      },
+      {
+        "title": "News",
+        "docs": "https://docs.rsshub.app/routes/traditional-media",
+        "source": [
+          "/"
+        ],
+        "target": "/nytimes/rss/:cat?"
       }
     ]
   },
@@ -21334,7 +21942,7 @@
     ]
   },
   "openwrt.org": {
-    "_name": "Unknown",
+    "_name": "OpenWrt",
     ".": [
       {
         "title": "Unknown",
@@ -21891,12 +22499,30 @@
         "target": "/pixiv/user/illustfollows"
       },
       {
-        "title": "User Novels",
+        "title": "Novel Series",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
-          "/users/:id/novels"
+          "/novel/series/:id"
+        ],
+        "target": "/pixiv/novel/series/:id"
+      },
+      {
+        "title": "User Novels (簡介 Basic info)",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/users/:id/novels",
+          "/users/:id"
         ],
         "target": "/pixiv/user/novels/:id"
+      },
+      {
+        "title": "User Novels (全文 Full text)",
+        "docs": "https://docs.rsshub.app/routes/social-media",
+        "source": [
+          "/users/:id/novels",
+          "/users/:id"
+        ],
+        "target": "/pixiv/user/novels/:id/true"
       },
       {
         "title": "User Activity",
@@ -22699,6 +23325,35 @@
           "/"
         ],
         "target": "/qust/jw"
+      }
+    ]
+  },
+  "qztc.edu.cn": {
+    "_name": "泉州师范学院",
+    "www": [
+      {
+        "title": "首页",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/:type/list.htm"
+        ],
+        "target": "/qztc/home/:type"
+      },
+      {
+        "title": "教务处",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/jwc/:type/list.htm"
+        ],
+        "target": "/qztc/jwc/:type"
+      },
+      {
+        "title": "数学与计算机科学学院 软件学院",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/sjxy/:type/list.htm"
+        ],
+        "target": "/qztc/sjxy/:type"
       }
     ]
   },
@@ -26173,7 +26828,7 @@
     ]
   },
   "taiwannews.com.tw": {
-    "_name": "Taiwan News 台灣英文新聞",
+    "_name": "Taiwan News",
     ".": [
       {
         "title": "Hot News",
@@ -26536,6 +27191,19 @@
           "/newsflash"
         ],
         "target": "/theblockbeats/newsflash"
+      }
+    ]
+  },
+  "thegradient.pub": {
+    "_name": "The Gradient",
+    ".": [
+      {
+        "title": "Posts",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/thegradient/posts"
       }
     ]
   },
@@ -26964,6 +27632,19 @@
       }
     ]
   },
+  "toutiao.com": {
+    "_name": "今日头条",
+    "www": [
+      {
+        "title": "头条主页",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/c/user/token/:token"
+        ],
+        "target": "/toutiao/user/token/:token"
+      }
+    ]
+  },
   "towardsdatascience.com": {
     "_name": "Towards Data Science",
     ".": [
@@ -27267,7 +27948,7 @@
     ]
   },
   "uber.com": {
-    "_name": "Uber 优步",
+    "_name": "Uber",
     "www": [
       {
         "title": "Engineering",
@@ -27811,6 +28492,20 @@
       }
     ]
   },
+  "vertikal.net": {
+    "_name": "Vertikal.net",
+    ".": [
+      {
+        "title": "News Archive",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/en/news",
+          "/"
+        ],
+        "target": "/vertikal/latest"
+      }
+    ]
+  },
   "vice.com": {
     "_name": "VICE",
     "www": [
@@ -27854,7 +28549,7 @@
     ]
   },
   "vom.mn": {
-    "_name": "Voice of Mongolia 蒙古之声",
+    "_name": "Voice of Mongolia",
     ".": [
       {
         "title": "News",
