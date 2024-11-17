@@ -8791,10 +8791,11 @@
             ]
           }
         ],
-        "name": "UP 主专栏",
+        "name": "UP 主图文",
         "maintainers": [
           "lengthmin",
-          "Qixingchen"
+          "Qixingchen",
+          "hyoban"
         ],
         "location": "article.ts"
       },
@@ -23582,6 +23583,69 @@
     "name": "大连理工大学",
     "url": "dutdice.dlut.edu.cn",
     "lang": "zh-CN"
+  },
+  "dw": {
+    "routes": {
+      "/news/:lang?/:id?": {
+        "path": "/news/:lang?/:id?",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/dw/news",
+        "parameters": {
+          "lang": "Language, see below, default to en",
+          "id": "Category ID, see below, default to the id of the Top Stories Page of the language chosen"
+        },
+        "features": {
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "requireConfig": false
+        },
+        "name": "News",
+        "maintainers": [
+          "quiniapiezoelectricity"
+        ],
+        "description": "\n:::tip\nParameters can be obtained from the official website, for instance:\nFor the site https://www.dw.com/de/deutschland/s-12321 the language code would be `de` and the category ID would be `s-1432`.\n:::\n",
+        "radar": [
+          {
+            "source": [
+              "www.dw.com/:lang/:name/:id"
+            ],
+            "target": "/news/:lang/:id"
+          }
+        ],
+        "location": "news.ts"
+      },
+      "/rss/:channel?": {
+        "path": "/rss/:channel?",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/dw/rss/rss-en-all",
+        "parameters": {
+          "category": "RSS Feed Channel, see below, `rss-en-all` by default"
+        },
+        "features": {
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false,
+          "requireConfig": false
+        },
+        "name": "RSS",
+        "maintainers": [
+          "quiniapiezoelectricity"
+        ],
+        "description": "\nFor a full list of RSS Feed Channels in English, please refer to [DW RSS Feeds](https://corporate.dw.com/en/rss-feeds/a-68693346).\nRSS Feed Channels in other languages are also available, for example: `rss-chi-all` renders the RSS feed in Chinese and `rss-de-all` for the RSS Feed in German \n",
+        "location": "rss.ts"
+      }
+    },
+    "name": "DW Deutsche Welle",
+    "url": "dw.com"
   },
   "dx2025": {
     "routes": {
@@ -43848,6 +43912,81 @@
     "url": "javtiful.com",
     "lang": "en"
   },
+  "javtrailers": {
+    "routes": {
+      "/casts/:cast": {
+        "path": "/casts/:cast",
+        "categories": [
+          "multimedia"
+        ],
+        "example": "/javtrailers/casts/hibiki-otsuki",
+        "parameters": {
+          "cast": "Cast name, can be found in the URL of the cast page"
+        },
+        "radar": [
+          {
+            "source": [
+              "javtrailers.com/casts/:category"
+            ]
+          }
+        ],
+        "name": "Casts",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "javtrailers.com/casts",
+        "location": "casts.ts"
+      },
+      "/categories/:category": {
+        "path": "/categories/:category",
+        "categories": [
+          "multimedia"
+        ],
+        "example": "/javtrailers/categories/50001755",
+        "parameters": {
+          "category": "Category name, can be found in the URL of the category page"
+        },
+        "radar": [
+          {
+            "source": [
+              "javtrailers.com/categories/:category"
+            ]
+          }
+        ],
+        "name": "Categories",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "javtrailers.com/categories",
+        "location": "categories.ts"
+      },
+      "/studios/:studio": {
+        "path": "/studios/:studio",
+        "categories": [
+          "multimedia"
+        ],
+        "example": "/javtrailers/studios/s1-no-1-style",
+        "parameters": {
+          "studio": "Studio name, can be found in the URL of the studio page"
+        },
+        "radar": [
+          {
+            "source": [
+              "javtrailers.com/studios/:category"
+            ]
+          }
+        ],
+        "name": "Studios",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "location": "studios.ts"
+      }
+    },
+    "name": "JavTrailers",
+    "url": "javtrailers.com",
+    "lang": "ja"
+  },
   "jd": {
     "routes": {
       "/price/:id": {
@@ -48066,7 +48205,7 @@
         "categories": [
           "blog"
         ],
-        "example": "/dev",
+        "example": "/logrocket/dev",
         "parameters": {
           "type": "dev | product-management | ux-design"
         },
@@ -65264,6 +65403,60 @@
     "url": "qqorw.cn",
     "lang": "zh-CN"
   },
+  "qstheory": {
+    "routes": {
+      "/:category?": {
+        "path": "/:category?",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/qstheory",
+        "parameters": {
+          "industry": "分类，见下表"
+        },
+        "radar": [
+          {
+            "source": [
+              "www.qstheory.cn/v9zhuanqu/:category/index.htm",
+              "www.qstheory.cn/qszq/:category/index.htm",
+              "www.qstheory.cn/:category/index.htm"
+            ]
+          }
+        ],
+        "name": "分类",
+        "maintainers": [
+          "nczitzk"
+        ],
+        "description": "\n| 头条    | 网评 | 视频 | 原创   | 经济    | 政治     | 文化    | 社会    | 党建 | 科教    | 生态    | 国防    | 国际          | 图书  | 学习笔记 | 理论文选 |\n| ------- | ---- | ---- | ------ | ------- | -------- | ------- | ------- | ---- | ------- | ------- | ------- | ------------- | ----- | -------- | -------- |\n| toutiao | qswp | qssp | qslgxd | economy | politics | culture | society | cpc  | science | zoology | defense | international | books | xxbj     | llwx     |",
+        "location": "index.ts"
+      },
+      "/magazine/:magazine": {
+        "path": "/magazine/:magazine",
+        "categories": [
+          "traditional-media"
+        ],
+        "example": "/qstheory/magazine/qs",
+        "parameters": {
+          "magazine": "刊物，`qs` 为求是，`hqwglist` 为红旗文稿"
+        },
+        "radar": [
+          {
+            "source": [
+              "www.qstheory.cn/:magazine/mulu.htm"
+            ]
+          }
+        ],
+        "name": "在线读刊",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "location": "magazine.ts"
+      }
+    },
+    "name": "求是网",
+    "url": "www.qstheory.cn",
+    "lang": "zh-CN"
+  },
   "questmobile": {
     "routes": {
       "/report/:industry?/:label?": {
@@ -67879,6 +68072,34 @@
   },
   "scu": {
     "routes": {
+      "/jwc": {
+        "path": "/jwc",
+        "categories": [
+          "university"
+        ],
+        "example": "/scu/jwc",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "jwc.scu.edu.cn"
+            ],
+            "target": "/jwc"
+          }
+        ],
+        "name": "教务处通知公告",
+        "maintainers": [
+          "Kyle-You"
+        ],
+        "location": "jwc/tzgg.ts"
+      },
       "/scupi": {
         "path": "/scupi",
         "categories": [
@@ -83211,10 +83432,41 @@
   },
   "wallstreetcn": {
     "routes": {
+      "/calendar/:section?": {
+        "path": "/calendar/:section?",
+        "categories": [
+          "finance"
+        ],
+        "example": "/wallstreetcn/calendar",
+        "parameters": {
+          "section": "`macrodatas` 或 `report`，默认为 `macrodatas`"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "wallstreetcn.com/calendar"
+            ]
+          }
+        ],
+        "name": "财经日历",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "url": "wallstreetcn.com/calendar",
+        "location": "calendar.ts"
+      },
       "/hot/:period?": {
         "path": "/hot/:period?",
         "categories": [
-          "traditional-media"
+          "finance"
         ],
         "example": "/wallstreetcn/hot",
         "parameters": {
@@ -83245,7 +83497,7 @@
       "/live/:category?/:score?": {
         "path": "/live/:category?/:score?",
         "categories": [
-          "traditional-media"
+          "finance"
         ],
         "example": "/wallstreetcn/live",
         "parameters": {
@@ -83277,10 +83529,11 @@
         "location": "live.ts"
       },
       "/news/:category?": {
-        "path": [
-          "/news/:category?",
-          "/:category?"
+        "path": "/news/:category?",
+        "categories": [
+          "finance"
         ],
+        "example": "/wallstreetcn/news",
         "radar": [
           {
             "source": [
@@ -83289,27 +83542,7 @@
             ]
           }
         ],
-        "name": "Unknown",
-        "maintainers": [
-          "nczitzk"
-        ],
-        "description": "| id           | 分类 |\n  | ------------ | ---- |\n  | global       | 最新 |\n  | shares       | 股市 |\n  | bonds        | 债市 |\n  | commodities  | 商品 |\n  | forex        | 外汇 |\n  | enterprise   | 公司 |\n  | asset-manage | 资管 |\n  | tmt          | 科技 |\n  | estate       | 地产 |\n  | car          | 汽车 |\n  | medicine     | 医药 |",
-        "location": "news.ts"
-      },
-      "/:category?": {
-        "path": [
-          "/news/:category?",
-          "/:category?"
-        ],
-        "radar": [
-          {
-            "source": [
-              "wallstreetcn.com/news/:category",
-              "wallstreetcn.com/"
-            ]
-          }
-        ],
-        "name": "Unknown",
+        "name": "资讯",
         "maintainers": [
           "nczitzk"
         ],
