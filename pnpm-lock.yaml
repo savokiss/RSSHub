@@ -234,8 +234,8 @@ importers:
         specifier: 4.0.1
         version: 4.0.1
       tldts:
-        specifier: 6.1.62
-        version: 6.1.62
+        specifier: 6.1.63
+        version: 6.1.63
       tosource:
         specifier: 2.0.0-alpha.3
         version: 2.0.0-alpha.3
@@ -367,8 +367,8 @@ importers:
         specifier: 2.0.5
         version: 2.0.5(vitest@2.0.5(@types/node@22.9.1)(jsdom@25.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)))
       discord-api-types:
-        specifier: 0.37.105
-        version: 0.37.105
+        specifier: 0.37.107
+        version: 0.37.107
       eslint:
         specifier: 9.15.0
         version: 9.15.0
@@ -2772,8 +2772,8 @@ packages:
     resolution: {integrity: sha512-d9paCbverdqmuwR+B40phSqiHhgPKiP8dpsMz5WT9U6ug2VVQ3tqXNCedpa6iGHg6mgv9lHaoq5DJUu2IXMjsQ==}
     engines: {node: '>=18.17.0'}
 
-  discord-api-types@0.37.105:
-    resolution: {integrity: sha512-TSNlLF5Q9vFLMeHjYskhmDj/zCQ4dFA+OLxQrHUypGW48gt8ttGaB+opCD9w3Zkq1otyoBoetrwaoDFZAFuGng==}
+  discord-api-types@0.37.107:
+    resolution: {integrity: sha512-XOxmxnhtYIRH55kLTrc/JS3nJV1l3wfBtTptFiRGdGDOe2qdCT4DltpxSgskasfDrKfw71Z5quG4tYqTxyPJ7g==}
 
   doctrine@3.0.0:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
@@ -5306,11 +5306,11 @@ packages:
     resolution: {integrity: sha512-tcwMRIioTcF/FcxLev8MJWxCp+GUALRhFEqbDoZrnowmKSGqPrl5pqS+Sut2m8BgJ6S4FExCSSpGffZ0Tks6Aw==}
     hasBin: true
 
-  tldts-core@6.1.62:
-    resolution: {integrity: sha512-ohONqbfobpuaylhqFbtCzc0dFFeNz85FVKSesgT8DS9OV3a25Yj730pTj7/dDtCqmgoCgEj6gDiU9XxgHKQlBw==}
+  tldts-core@6.1.63:
+    resolution: {integrity: sha512-H1XCt54xY+QPbwhTgmxLkepX0MVHu3USfMmejiCOdkMbRcP22Pn2FVF127r/GWXVDmXTRezyF3Ckvhn4Fs6j7Q==}
 
-  tldts@6.1.62:
-    resolution: {integrity: sha512-TF+wo3MgTLbf37keEwQD0IxvOZO8UZxnpPJDg5iFGAASGxYzbX/Q0y944ATEjrfxG/pF1TWRHCPbFp49Mz1Y1w==}
+  tldts@6.1.63:
+    resolution: {integrity: sha512-YWwhsjyn9sB/1rOkSRYxvkN/wl5LFM1QDv6F2pVR+pb/jFne4EOBxHfkKVWvDIBEAw9iGOwwubHtQTm0WRT5sQ==}
     hasBin: true
 
   tmp@0.0.33:
@@ -8343,7 +8343,7 @@ snapshots:
 
   directory-import@3.3.1: {}
 
-  discord-api-types@0.37.105: {}
+  discord-api-types@0.37.107: {}
 
   doctrine@3.0.0:
     dependencies:
@@ -11282,11 +11282,11 @@ snapshots:
 
   tlds@1.255.0: {}
 
-  tldts-core@6.1.62: {}
+  tldts-core@6.1.63: {}
 
-  tldts@6.1.62:
+  tldts@6.1.63:
     dependencies:
-      tldts-core: 6.1.62
+      tldts-core: 6.1.63
 
   tmp@0.0.33:
     dependencies:
@@ -11322,7 +11322,7 @@ snapshots:
 
   tough-cookie@5.0.0:
     dependencies:
-      tldts: 6.1.62
+      tldts: 6.1.63
 
   tr46@0.0.3: {}
 
