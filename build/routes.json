@@ -5845,6 +5845,41 @@
     "url": "aisixiang.com",
     "lang": "zh-CN"
   },
+  "ajcass": {
+    "routes": {
+      "/shxyj/:year?/:issue?": {
+        "path": "/shxyj/:year?/:issue?",
+        "categories": [
+          "journal"
+        ],
+        "example": "/ajcass/shxyj/2024/1",
+        "parameters": {
+          "year": "Year of the issue, `null` for the lastest",
+          "issue": "Issue number, `null` for the lastest"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "社会学研究",
+        "maintainers": [
+          "CNYoki"
+        ],
+        "location": "shxyj.ts"
+      }
+    },
+    "name": "社科期刊网",
+    "url": "ajcass.com",
+    "description": "中国社会科学院学术期刊方阵",
+    "lang": "zh-CN",
+    "zh": {
+      "name": "社科期刊网"
+    }
+  },
   "ajmide": {
     "routes": {
       "/:id": {
@@ -19911,6 +19946,116 @@
     "name": "天下雜誌",
     "url": "cw.com.tw",
     "lang": "zh-TW"
+  },
+  "cybersecurityventures": {
+    "routes": {
+      "/news/:category?": {
+        "name": "News",
+        "categories": [
+          "programming"
+        ],
+        "path": "/news/:category?",
+        "example": "/cybersecurityventures/news",
+        "radar": [
+          {
+            "source": [
+              "cybersecurityventures.com/today"
+            ],
+            "target": "/news/today",
+            "title": "Today's News"
+          },
+          {
+            "source": [
+              "cybersecurityventures.com/intrusion-daily-cyber-threat-alert"
+            ],
+            "target": "/news/intrusion-daily-cyber-threat-alert",
+            "title": "Cyberattacks"
+          },
+          {
+            "source": [
+              "cybersecurityventures.com/ransomware-minute"
+            ],
+            "target": "/news/ransomware-minute",
+            "title": "Ransomware"
+          },
+          {
+            "source": [
+              "cybersecurityventures.com/cryptocrime"
+            ],
+            "target": "/news/cryptocrime",
+            "title": "Cryptocrime"
+          },
+          {
+            "source": [
+              "cybersecurityventures.com/hack-blotter"
+            ],
+            "target": "/news/hack-blotter",
+            "title": "Hack Blotter"
+          },
+          {
+            "source": [
+              "cybersecurityventures.com/cybersecurity-venture-capital-vc-deals"
+            ],
+            "target": "/news/cybersecurity-venture-capital-vc-deals",
+            "title": "VC Deal Flow"
+          },
+          {
+            "source": [
+              "cybersecurityventures.com/mergers-and-acquisitions-report"
+            ],
+            "target": "/news/mergers-and-acquisitions-report",
+            "title": "M&A Tracker"
+          }
+        ],
+        "parameters": {
+          "category": {
+            "description": "news category",
+            "default": "today",
+            "options": [
+              {
+                "value": "today",
+                "label": "Today's News"
+              },
+              {
+                "value": "intrusion-daily-cyber-threat-alert",
+                "label": "Cyberattacks"
+              },
+              {
+                "value": "ransomware-minute",
+                "label": "Ransomware"
+              },
+              {
+                "value": "cryptocrime",
+                "label": "Cryptocrime"
+              },
+              {
+                "value": "hack-blotter",
+                "label": "Hack Blotter"
+              },
+              {
+                "value": "cybersecurity-venture-capital-vc-deals",
+                "label": "VC Deal Flow"
+              },
+              {
+                "value": "mergers-and-acquisitions-report",
+                "label": "M&A Tracker"
+              }
+            ]
+          }
+        },
+        "maintainers": [
+          "KarasuShin"
+        ],
+        "features": {
+          "supportRadar": true
+        },
+        "view": 0,
+        "location": "news.ts"
+      }
+    },
+    "name": "Cybercrime Magazine",
+    "url": "cybersecurityventures.com",
+    "lang": "en"
   },
   "cyzone": {
     "routes": {
