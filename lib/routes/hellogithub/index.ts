@@ -1,8 +1,8 @@
-import { Route } from '@/types';
-import got from '@/utils/got';
-
 import { load } from 'cheerio';
-import { parseDate } from '@/utils/parse-date';
+
+import type { Route } from '@/types';
+import got from '@/utils/got';
+import { parseDateInTimezone } from '@/utils/parse-date-in-timezone';
 
 const sorts = {
     featured: '精选',
@@ -10,7 +10,7 @@ const sorts = {
 };
 
 export const route: Route = {
-    path: ['/home/:sort?/:id?'],
+    path: '/home/:sort?/:id?',
     categories: ['programming'],
     example: '/hellogithub/home',
     parameters: { sort: '排序方式，见下表，默认为 `featured`，即精选', id: '标签 id，可在对应标签页 URL 中找到，默认为全部标签' },
@@ -23,11 +23,11 @@ export const route: Route = {
         supportScihub: false,
     },
     name: '开源项目',
-    maintainers: ['moke8', 'nczitzk'],
+    maintainers: ['moke8', 'nczitzk', 'CaoMeiYouRen'],
     handler,
-    description: `| 精选 | 全部 |
-  | ---- | ---- |
-  | featured  | all |`,
+    description: `| 精选     | 全部 |
+| -------- | ---- |
+| featured | all  |`,
 };
 
 async function handler(ctx) {
@@ -64,9 +64,9 @@ async function handler(ctx) {
         title: `${item.name}: ${item.title}`,
         author: item.author,
         link: `${rootUrl}/repository/${item.item_id}`,
-        pubDate: parseDate(item.updated_at),
+        pubDate: parseDateInTimezone(item.updated_at, 8),
         name: `${item.author}/${item.name}`,
-        summary: item.summary,
+        description: item.summary,
         language: item.primary_lang,
     }));
 

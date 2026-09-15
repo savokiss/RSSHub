@@ -1,4 +1,4 @@
-import { Route } from '@/types';
+import type { Route } from '@/types';
 import cache from '@/utils/cache';
 import got from '@/utils/got';
 import { parseDate } from '@/utils/parse-date';
@@ -9,9 +9,11 @@ const titles = {
     bonds: '债市',
     commodities: '商品',
     forex: '外汇',
+    finance: '金融',
     enterprise: '公司',
     'asset-manage': '资管',
     tmt: '科技',
+    ai: '硬AI',
     estate: '地产',
     car: '汽车',
     medicine: '医药',
@@ -29,19 +31,21 @@ export const route: Route = {
     name: '资讯',
     maintainers: ['nczitzk'],
     handler,
-    description: `| id           | 分类 |
-  | ------------ | ---- |
-  | global       | 最新 |
-  | shares       | 股市 |
-  | bonds        | 债市 |
-  | commodities  | 商品 |
-  | forex        | 外汇 |
-  | enterprise   | 公司 |
-  | asset-manage | 资管 |
-  | tmt          | 科技 |
-  | estate       | 地产 |
-  | car          | 汽车 |
-  | medicine     | 医药 |`,
+    description: `| id           | 分类  |
+| ------------ | ----- |
+| global       | 最新  |
+| shares       | 股市  |
+| bonds        | 债市  |
+| commodities  | 商品  |
+| forex        | 外汇  |
+| finance      | 金融  |
+| enterprise   | 公司  |
+| asset-manage | 资管  |
+| tmt          | 科技  |
+| ai           | 硬 AI |
+| estate       | 地产  |
+| car          | 汽车  |
+| medicine     | 医药  |`,
 };
 
 async function handler(ctx) {
@@ -50,7 +54,7 @@ async function handler(ctx) {
     const rootUrl = 'https://wallstreetcn.com';
     const apiRootUrl = 'https://api-one.wallstcn.com';
     const currentUrl = `${rootUrl}/news/${category}`;
-    const apiUrl = `${apiRootUrl}/apiv1/content/information-flow?channel=${category}-channel&accept=article&limit=${ctx.req.query('limit') ?? 25}`;
+    const apiUrl = `${apiRootUrl}/apiv1/content/information-flow?channel=${category}&accept=article&limit=${ctx.req.query('limit') ?? 25}`;
 
     const response = await got({
         method: 'get',
@@ -74,7 +78,14 @@ async function handler(ctx) {
                     url: `${apiRootUrl}/apiv1/content/${item.type === 'live' ? `lives/${item.guid}` : `articles/${item.guid}?extract=0`}`,
                 });
 
-                const data = detailResponse.data.data;
+                const responseData = detailResponse.data;
+
+                // 处理 { code: 60301, message: '内容不存在或已被删除', data: {} }
+                if (responseData.code !== 20000) {
+                    return null;
+                }
+
+                const data = responseData.data;
 
                 item.title = data.title || data.content_text;
                 item.author = data.source_name ?? data.author.display_name;
@@ -94,6 +105,8 @@ async function handler(ctx) {
             })
         )
     );
+
+    items = items.filter((item) => item !== null);
 
     return {
         title: `华尔街见闻 - 资讯 - ${titles[category]}`,
