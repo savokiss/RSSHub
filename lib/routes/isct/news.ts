@@ -1,14 +1,21 @@
-import { Route } from '@/types';
-import ofetch from '@/utils/ofetch';
-import { parseDate } from '@/utils/parse-date';
 import { decode } from 'entities';
 
-interface NewsItem {
+import type { Route } from '@/types';
+import ofetch from '@/utils/ofetch';
+import { parseDate } from '@/utils/parse-date';
+
+interface MediaItem {
     ID: string;
     TITLE: string;
     PUBLISH_DATE: string;
     META_DESCRIPTION: string;
     MEDIA_CD: string;
+    MEDIA_TYPES: string;
+}
+
+interface TagItem {
+    TAG_ID: string;
+    TAG_NAME: string;
 }
 
 export const route: Route = {
@@ -34,11 +41,20 @@ export const route: Route = {
     maintainers: ['catyyy'],
     handler: async (ctx) => {
         const { lang = 'ja' } = ctx.req.param();
-        const response = await ofetch(`https://www.isct.ac.jp/expansion/get_media_list_json.php?lang_cd=${lang}`);
+        const mediaResponse = await ofetch(`https://www.isct.ac.jp/expansion/get_media_list_json.php?lang_cd=${lang}`);
+        const tagResponse = await ofetch(`https://www.isct.ac.jp/expansion/get_tag_list_json.php?lang_cd=${lang}`);
 
-        const decodedResponse = decode(response);
-        const data = JSON.parse(decodedResponse);
-        const itemsArray: NewsItem[] = Object.values(data);
+        const mediaData = JSON.parse(decode(mediaResponse));
+        const tagData = JSON.parse(decode(tagResponse));
+
+        const itemsArray: MediaItem[] = Object.values(mediaData);
+        const tagArray: TagItem[] = Object.values(tagData);
+
+        const tagIdNameMapping: { [key: string]: string } = {};
+
+        for (const item of Object.values(tagArray)) {
+            tagIdNameMapping[item.TAG_ID] = item.TAG_NAME;
+        }
 
         const items = itemsArray.map((item) => ({
             // 文章标题
@@ -52,7 +68,7 @@ export const route: Route = {
             // 如果有的话，文章作者
             // author: item.user.login,
             // 如果有的话，文章分类
-            // category: item.labels.map((label) => label.name),
+            category: item.MEDIA_TYPES ? [tagIdNameMapping[Number(item.MEDIA_TYPES.replaceAll('"', ''))]] : [],
         }));
         return {
             // 源标题
